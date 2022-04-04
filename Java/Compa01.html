@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // let user, name, surName;
+
+        name = prompt("Name:"),
+        surName = prompt("Surname"),
+        userName = prompt("Enter Username:");
+        
+            // if (name != ''){
+            //     console.log('Welcome ' + name );             
+            // }
+            // else if (surName != ''){
+            //     console.log('Welcome ' + surName);
+            // }
+            // else if (user != ''){
+            //     console.log('Welcome ' + user);
+            // }
+            // else {
+            //     console.log("Anonymous");
+            // }
+        
+        const user = [name, surName, userName, 'anonymous'];
+            for (i=0; i<4; i++){    
+                if (user[i] != ''){
+                    console.log('Welcome ' +  user[i]);  
+                break;
+                }
+            }
+
+        console.log('Done.');
+    
+
+    </Script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let string = prompt('enter string');
+// #1
+        // if (string === "") {
+        // console.log("The string is empty")
+        // }
+        // else{
+        // console.log("The string is not empty") 
+        // }
+// #2    
+        // if (!string || string.length === 0){
+        //     console.log("The string is empty")
+        // }
+        // else {
+        // console.log("The string is not empty") 
+        // }
+// #3
+        // function isEmptyFunction(_string) {
+        //     return (!_string || _string.length === 0 );  //  return true or false
+        // }
+        //     console.log(isEmptyFunction(""))
+        //     console.log(isEmptyFunction("Hello Javascript"))
+// #4
+        // function isEmptyFunction2(_string1) {
+        //     return (_string1.length === 0 || !_string1.trim());
+        // };
+        //     console.log(isEmptyFunction2("Hello Javascript"))
+        //     console.log(isEmptyFunction2(""))
+        //     console.log(isEmptyFunction2("    "))
+// #5
+        // function isImproperStringCheck(_string){
+        //     if (Boolean(_string)){
+        //     console.log("The string is proper") //false for null, undefined, 0, 000, "", false.
+        //     }
+        //     else{
+        //     console.log("The string is improper") //true for string "0" and whitespace " ".
+        //     }
+        // }
+        //     isImproperStringCheck(string)
+            // isImproperStringCheck("  ")
+            // isImproperStringCheck("Hello Javascript")
+            // isImproperStringCheck(0)
+            // isImproperStringCheck("0")
+
+// #6
+            // function isEmptyCheck(_string){
+            //     if(_string.replace(/\s/g,"") == ""){
+            //         console.log("The string is blank") 
+            //     }
+            //     else{
+            //         console.log("The string is not blank") 
+            //     }
+            // }
+            // console.log(string);
+            // isEmptyCheck(string)
+            // isEmptyCheck("  ")
+            // isEmptyCheck("Hello Javascript")
+
+// #7
+            // function check_empty(_string) {
+            //     switch (_string) {
+            //     case "":
+            //     case null:
+            //     case false:
+            //     case 0:
+            //     case typeof(_string) == "undefined":
+            //         return "String is empty/null/undefined/0";
+            //     default:
+            //         return "String input is valid";
+            //     }
+            // }
+            //     console.log(check_empty(null))
+            //     console.log(check_empty("Hello Javascript")) 
+            //     console.log(check_empty(0)) 
+            //     console.log(check_empty(7) )
+            //     console.log(check_empty(""))
+
+    </script>
+
+
+
+</body>
+</html>

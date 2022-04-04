@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+        let days = Number(prompt("Electricity use for how many days")),
+        elecUse = Number(prompt("How much?"));
+        average = elecUse/days;
+        
+        let newdata = Number(prompt("How much for today?"));
+        let newdata2 = 0;
+
+        if (newdata > average + 20) {
+            console.log("your consume is to much!!!")
+            let newdata2 = Number(prompt("Do you want to add it to your consume average?"));
+            if( newdata2 == yes){
+                elecUse = elecUse + newdata;
+                days++;
+            }
+        }
+        else {
+            elecUse = elecUse + newdata;
+            days++;
+        }
+
+        average = elecUse/days;
+
+        console.log('Your consume average is ' + average + 'KW');
+
+    </script>
+        
+</body>
+</html>

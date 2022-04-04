@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Menu
+        
+// קלטו מחרוזת.
+// בנו תפריט :
+// 1. חיתוך רווחים (יש לשמור את התוצאה).
+// 2. כמה מילים יש במחרוזת
+// 3. כמה מספרים יש במחרוזת.
+// 4. חיתוך מחרוזת
+//         בקשו מהמשתמש מאיפה עד איפה.
+//         במקרה שהמספר הגדול הוא ראשון - חתכו לאחור.
+
+
+// 9. החלפת מחרוזת.
+// 10. יציאה
+
+// כל שאר האפשרויות >> שגיאה והצגת תפריט שוב.
+
+// ניתן להשתמש ב- switch-case
+
+
+
+// בונוס - יציאה רק אם כותב exit.
+
+// https://thispointer.com/javascript-check-if-string-is-empty-6-ways/
+
+        let phrase = '';
+        let newp = 'true';
+
+        while (phrase === '' || phrase.trim() === '') {
+            phrase = prompt('Enter a phrase:');
+        } 
+       
+        while (newp === 'true') {
+        let toDo = prompt(`What do you want to do?
+        [1] To cut the phrase into words
+        [2] How many words have in my phrase?
+        [3] how many numbers have in my phrase?
+        [4] To cut the phrase from --> to
+        [5] how many characters have in my phrase?
+        [8] Another phrase?
+        [9] Exit`);
+        
+            switch(toDo) {
+                case "1":
+                    let aSplit = phrase.split(' ');
+                    for (i=0; i < aSplit.length; i++){
+                        console.log(aSplit[i]);
+                    };
+                    break;
+
+                case "2":
+                    let bSplit = phrase.split(' ');
+                    console.log('There are ' + bSplit.length + ' words in your phrase.');
+                    break;
+
+                case "3":
+                    let digits = /\d/g;
+                    let result = phrase.match(digits);
+
+                    if (result != null){
+                        console.log('There are ' + result.length + ' numbers in your phrase.');
+                    }
+                    else {
+                    console.log('There is no numbers in your phrase!!!');
+                    }
+                    break;
+
+                case "4":
+                    strSlice = prompt('Where do you want to start slicing?');
+                    endSlice = prompt('Where do you want to end slicing?');
+                    if (strSlice > endSlice){
+                        console.log(phrase.slice(endSlice, strSlice));
+                    }
+                    console.log(phrase.slice(strSlice, endSlice));
+                    break;
+
+                case "5":
+
+                    let word = /\w/g;                   //\w look for words 
+                    let result1 = phrase.match(word);
+                    let newPhrase = '';
+                    if (result1 != null){
+
+                        for (i=0; i < result1.length; i++){
+                            newPhrase += result1[i]
+                            }
+                        let char = /\D/g;                   //\D look for non digits
+                        let result2 = newPhrase.match(char);
+                        
+                        if (result2 != null){
+                            console.log('There are ' + result2.length + ' characters in your frase.');
+                        }
+                        else {
+                        console.log('There is no characters in your frase!!!');
+                        }
+                    }
+                    else {
+                        console.log('There is no characters in your frase!!!');
+                    }
+                    break;
+
+                case "6":
+                    console.log('Wrong choice. Try again.');
+                    break;
+
+                case "7":
+                    console.log('Wrong choice. Try again.');
+                    break;
+
+                case "8":
+                    phrase = prompt('Enter a new phrase');
+                    break; 
+
+                case "9":
+                    console.log('Good Bye');
+                    newp = 'false';
+                    break;
+
+                default:
+                    console.log("I have never heard of that one!");
+            } 
+        }
+        
+            
+    </Script>
+</body>
+</html>

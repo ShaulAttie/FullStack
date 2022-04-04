@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //CHECK FOR NUMBER
+
+        let name = prompt('Enter a word:');
+        let counter = 0;
+        
+        // for (i=0; i < name.length; i++){
+        //     //debugger;
+        //     if ( name.charCodeAt(i) >=48 &&  name.charCodeAt(i) <= 57){
+        //     counter++;
+        //     }
+        // }
+        // console.log(counter);
+
+        let n;
+        for (i=0; i < name.length; i++){
+            //debugger;
+            n = Number(name[i]); 
+            if ( !isNaN(n)){
+            counter++;
+            }
+        }
+        console.log(counter);
+
+
+    </Script>
+</body>
+</html>

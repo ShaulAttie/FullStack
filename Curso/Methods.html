@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        
+    //concat() --> joins strings and arrays
+        //string.concat(string1, string2, ..., stringX)
+        //array1.concat(array2, array3, ..., arrayX)
+
+            // let str01 = "soly";
+            // let str02 = "attie";
+            // let str = str01.concat(" ",str02);
+            // console.log(str);
+
+            // let arr01 = ["soly"];
+            // let arr02 = ["attie"];
+            // let arr = arr01.concat(arr02);
+            // console.log(arr);
+
+    //includes() --> will returns true if a string contains a specified string. 
+        //               or if in the array contains the exact world.
+        //string.includes(searchvalue, start)
+        //array.includes(element, start)
+        
+            // let text = "Hello world, welcome to the universe.";
+            // let result = text.includes("orl");
+            // console.log(result);
+
+            // const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            // let result01 = fruits.includes("Banana", 3);
+            // console.log(result01);
+
+    //indexOf() --> indexOf() returns the position of the first occurrence of a value in a string. false = -1
+        //string.indexOf(searchvalue, start)
+        //array.indexOf(item, start)
+
+            // let text = "Hello world, welcome to the universe.";
+            // console.log(text.indexOf("e", 5));
+
+            // const fruits = ["Banana", "Orange", "Apple", "Mango", "Apple"];
+            // console.log(fruits.indexOf("Apple", 3));
+
+    //repeat() --> repeat() returns a new string with a number of copies of a string
+        //string.repeat(count)
+
+            // let text = "Hello world! ";
+            // console.log(text.repeat(4));    
+
+    //replace() --> replace() searches a string for a value, and returns a new string with the specified value(s) replaced
+        //string.replace(searchValue, newValue)
+
+            // let text = "Mr Blue has a blue house and a blue car";
+            // console.log(text.replace(/blue|Blue/g, "red"));
+
+    //slice() -- >slice() extracts a part of a string and returns the extracted part:
+        //string.slice(start, end) 
+        //array.slice(start, end) 
+        //can be negative starting from the end of the string or array. the last one is -1
+    
+            // let text = "Hello world!";
+            // console.log(text.slice(0, 5));
+
+            // const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+            // console.log(fruits.slice(1, 3));
+
+    //split() --> split() splits a string into an array of substrings, and returns the array:
+        // " " -> split on " "
+        // "" -> split every character also spaces
+        //string.split(separator, limit)
+
+            // let text = "How are you doing today?";
+            // const myArray = text.split(" ", 3);
+            // console.log(myArray);
+
+    //startWith() --> startsWith() returns true if a string starts with a specified string:
+        //string.startsWith(searchValue, start)
+
+        // let text = "Hello world, welcome to the universe.";
+        // text.startsWith("world", 7);
+
+
+    //substring() --> substring() extracts a part of a string:
+        //string.substring(start, end)
+
+        // let text = "Hello world!";
+        // let result = text.substring(1, 4);
+
+    //toLowerCase() --> toLowerCase() converts a string to lowercase letters:
+        //string.toLowerCase()
+
+    //toUpperCase() --> toUpperCase() converts a string to uppercase letters:
+        //string.toUpperCase()
+
+    //trim() --> trim() removes whitespace from both sides of a string:
+        //string.trim()
+
+    </script>
+
+
+
+
+</body>
+</html>

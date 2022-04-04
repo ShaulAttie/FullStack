@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="500" height="500"
+style="border:10px solid #c3c3c3;">
+Your browser does not support the canvas element.
+</canvas>
+
+<script>
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+
+    ctx.fillStyle = "purple";          // Backround
+    ctx.fillRect(10, 10, 480, 480);
+
+    // Create gradient
+    //var grd = ctx.createLinearGradient(0,0,500,500); // (x0,y0,x1,y1)
+    //grd.addColorStop(0,"blue");
+    //grd.addColorStop(0.25,"white");
+    //grd.addColorStop(0.5,"red");
+    //grd.addColorStop(0.75,"white");
+    //grd.addColorStop(1,"blue");
+   
+
+    // Fill with gradient
+    //ctx.fillStyle = grd;
+    //ctx.fillRect(10,10,480,480);
+
+    // Create gradient
+    var grd1 = ctx.createRadialGradient(200,100,0,200,100,40);
+    var grd2 = ctx.createRadialGradient(100,100,0,100,100,40);
+    grd1.addColorStop(0, "red");
+    grd1.addColorStop(1, "white");
+    grd2.addColorStop(0, "blue");
+    grd2.addColorStop(1, "white");
+
+    // Fill with gradient
+    ctx.fillStyle = grd1;
+    ctx.fillRect(160, 60, 80, 80);
+    ctx.fillStyle = grd2;
+    ctx.fillRect(60, 60, 80, 80);
+
+    //ctx.moveTo(50,50);                  // To draw a Line, start point
+    //ctx.lineTo(200,100);
+    //ctx.lineTo(200,50);
+    //ctx.lineTo(0,50);
+    //ctx.lineTo(0,0);
+    //ctx.stroke();                       // fill the line
+
+    ctx.beginPath();                    // To draw a circle
+    ctx.arc(200,100,40,0,2*Math.PI);
+    ctx.moveTo(160,100);
+    ctx.arc(100,100,40,0,2*Math.PI);
+    ctx.moveTo(150,100);
+    ctx.arc(150,160,40,1/4*Math.PI,3/4*Math.PI);
+    ctx.moveTo(100,220);
+    ctx.arc(150,160,80,1/4*Math.PI,3/4*Math.PI);
+    
+    ctx.stroke();
+
+
+</script>
+
+</body>
+</html>
